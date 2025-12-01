@@ -1,0 +1,63 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.popup-overlay {
+  	display: flex;
+  	flex-direction: column;
+  	position: fixed;
+  	inset: 0;
+}
+
+
+:root {
+  	
+  	/* Common Style Variables */
+  	
+  	/* Color */
+  	--color-black: #000;
+  	--color-darkorchid: #9a47e6;
+  	--color-ghostwhite: #eef0f7;
+  	--color-gray-100: #121212;
+  	--color-gray-200: rgba(0, 0, 0, 0.6);
+  	--color-gray-300: rgba(255, 255, 255, 0.95);
+  	--color-lightsteelblue: #98a3c7;
+  	--color-white: #fff;
+  	
+  	/* Gap */
+  	--gap-10: 0.625rem;
+  	--gap-16: 1rem;
+  	--gap-24: 1.5rem;
+  	--gap-32: 2rem;
+  	--gap-48: 3rem;
+  	
+  	/* Padding */
+  	--padding-12: 0.75rem;
+  	--padding-24: 1.5rem;
+  	--padding-48: 3rem;
+  	--padding-64: 4rem;
+  	
+  	/* BorderRadius */
+  	--br-6: 6px;
+  	--br-32: 32px;
+  	
+  	/* Font */
+  	--font-circular-std: Circular Std;
+  	--font-dm-sans: DM Sans;
+  	--font-passion-one: Passion One;
+  	--font-sofia-pro: Sofia Pro;
+  	
+  	/* FontSize */
+  	--fs-14: 0.875rem;
+  	--fs-16: 1rem;
+  	--fs-18: 1.125rem;
+  	--fs-48: 3rem;
+  	
+  	/* WidthHeights */
+  	--height-12: 0.75rem;
+  	--height-24: 1.5rem;
+  	--height-48: 3rem;
+  	
+}

@@ -1,0 +1,400 @@
+.contact-pop-up-step-1 {
+  	width: 100%;
+  	position: relative;
+  	backdrop-filter: blur(4px);
+  	background-color: var(--color-gray-300);
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 7rem var(--padding-64);
+  	box-sizing: border-box;
+  	/* max-width: 90%;
+  	max-height: 90%; */
+  	text-align: center;
+  	font-size: var(--fs-16);
+  	color: var(--color-black);
+  	font-family: var(--font-dm-sans);
+}
+.container2 {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: var(--gap-48);
+  	max-width: 80rem;
+}
+.section-title {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: var(--gap-16);
+  	max-width: 48rem;
+}
+.tagline-wrapper {
+  	display: flex;
+  	align-items: center;
+}
+.tagline {
+  	position: relative;
+  	line-height: 150%;
+  	font-weight: 600;
+}
+.content2 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: var(--gap-24);
+  	font-size: var(--fs-48);
+}
+.heading {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 120%;
+}
+.text {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: var(--fs-18);
+  	line-height: 150%;
+}
+.form {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 1.125rem;
+  	max-width: 35rem;
+  	text-align: left;
+  	font-size: var(--fs-14);
+  	color: var(--color-gray-200);
+}
+.progress {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: var(--gap-32);
+  	color: var(--color-lightsteelblue);
+  	font-family: var(--font-circular-std);
+}
+.loader-text {
+  	position: relative;
+}
+.loader {
+  	align-self: stretch;
+  	height: var(--height-12);
+  	border-radius: var(--br-32);
+  	background-color: var(--color-ghostwhite);
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.progress2 {
+  	width: 2.813rem;
+  	height: var(--height-12);
+  	position: relative;
+  	border-radius: var(--br-32);
+  	background-color: var(--color-darkorchid);
+}
+.input {
+  	width: 35rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+  	gap: var(--gap-10);
+}
+.label {
+  	width: 33.5rem;
+  	position: relative;
+  	line-height: 150%;
+  	display: inline-block;
+}
+.text-input {
+  	align-self: stretch;
+  	height: 3.125rem;
+  	border-radius: var(--br-6);
+  	background-color: var(--color-white);
+  	border: 1px solid var(--color-gray-100);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	padding: var(--padding-12);
+}
+.checkbox-group {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 0.5rem;
+  	color: var(--color-black);
+}
+.checkbox2 {
+  	height: 1.25rem;
+  	width: 1.25rem;
+  	position: relative;
+  	background-color: var(--color-white);
+  	border: 1px solid var(--color-black);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+}
+.label4 {
+  	flex: 1;
+  	position: relative;
+  	line-height: 150%;
+}
+.button-parent {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: flex-end;
+  	padding: var(--padding-48) 0rem 0rem;
+  	font-size: var(--fs-16);
+  	color: var(--color-white);
+  	font-family: var(--font-sofia-pro);
+}
+.button3 {
+  	width: 9.188rem;
+  	display: none;
+  	align-items: flex-start;
+  	justify-content: flex-end;
+  	opacity: 0.3;
+}
+.button4 {
+  	align-self: stretch;
+  	border-radius: var(--br-6);
+  	background-color: var(--color-black);
+  	border: 1px solid var(--color-black);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-12) var(--padding-24);
+}
+.button5 {
+  	position: relative;
+  	line-height: 150%;
+}
+.button6 {
+  	display: flex;
+  	align-items: flex-start;
+}
+
+/*  */
+
+.contact-pop-up-step-2 {
+  	width: 100%;
+  	position: relative;
+  	background-color: var(--color-white);
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 7rem 4rem;
+  	box-sizing: border-box;
+  	text-align: center;
+  	font-size: var(--fs-16);
+  	color: var(--color-black);
+  	font-family: var(--font-dm-sans);
+}
+.container {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 3rem;
+  	max-width: 80rem;
+}
+.section-title {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 1rem;
+  	max-width: 48rem;
+}
+.tagline-wrapper {
+  	display: flex;
+  	align-items: center;
+}
+.tagline {
+  	position: relative;
+  	line-height: 150%;
+  	font-weight: 600;
+}
+/* .content {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 1.5rem;
+  	font-size: 3rem;
+}
+.heading {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 120%;
+}
+.text {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 1.125rem;
+  	line-height: 150%;
+}
+.form {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 1.125rem;
+  	max-width: 35rem;
+  	text-align: left;
+  	font-size: var(--fs-14);
+  	color: var(--color-gray-200);
+} */
+.progress {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 2rem;
+  	color: var(--color-lightsteelblue);
+  	font-family: var(--font-circular-std);
+}
+.loader-text {
+  	position: relative;
+}
+.loader {
+  	align-self: stretch;
+  	height: var(--height-12);
+  	border-radius: var(--br-32);
+  	background-color: var(--color-ghostwhite);
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.progress2 {
+  	width: 9.075rem;
+  	height: var(--height-12);
+  	position: relative;
+  	border-radius: var(--br-32);
+  	background-color: var(--color-darkorchid);
+}
+.input {
+  	width: 35rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+  	gap: var(--gap-10);
+}
+.label {
+  	width: 33.5rem;
+  	position: relative;
+  	line-height: 150%;
+  	display: inline-block;
+}
+.text-input {
+  	align-self: stretch;
+  	border-radius: var(--br-6);
+  	background-color: var(--color-white);
+  	border: 1px solid var(--color-gray-100);
+  	display: flex;
+  	align-items: center;
+  	padding: var(--padding-12);
+  	font-size: var(--fs-16);
+}
+.placeholder {
+  	flex: 1;
+  	position: relative;
+  	line-height: 150%;
+}
+.text-area {
+  	width: 35.125rem;
+  	height: 11.375rem;
+  	border-radius: var(--br-6);
+  	background-color: var(--color-white);
+  	border: 1px solid var(--color-black);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: var(--padding-12);
+  	position: relative;
+  	isolation: isolate;
+  	font-size: var(--fs-16);
+}
+.type-your-message {
+  	flex: 1;
+  	position: relative;
+  	line-height: 150%;
+  	z-index: 0;
+  	flex-shrink: 0;
+}
+.text-area-child {
+  	height: 0.125rem;
+  	width: 0.125rem;
+  	position: absolute;
+  	margin: 0 !important;
+  	right: 0.125rem;
+  	bottom: 0.11rem;
+  	object-fit: contain;
+  	z-index: 1;
+  	flex-shrink: 0;
+}
+.text-area-item {
+  	height: 0.375rem;
+  	width: 0.375rem;
+  	position: absolute;
+  	margin: 0 !important;
+  	right: 0.125rem;
+  	bottom: 0.125rem;
+  	object-fit: contain;
+  	z-index: 2;
+  	flex-shrink: 0;
+}
+.input3 {
+  	width: 35rem;
+  	height: 4.938rem;
+  	display: none;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+}
+.button-parent {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	padding: 3rem 0rem 0rem;
+  	gap: 1.25rem;
+  	font-size: var(--fs-16);
+  	color: var(--color-white);
+  	font-family: var(--font-sofia-pro);
+}
+.button {
+  	display: flex;
+  	align-items: flex-start;
+  	opacity: 0.3;
+}
+.button2 {
+  	align-self: stretch;
+  	border-radius: var(--br-6);
+  	background-color: var(--color-black);
+  	border: 1px solid var(--color-black);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-12) var(--padding-24);
+}
+.button3 {
+  	position: relative;
+  	line-height: 150%;
+}
+.button4 {
+  	display: flex;
+  	align-items: flex-start;
+}
+
