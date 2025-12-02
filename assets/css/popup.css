@@ -180,6 +180,9 @@ input:focus-visible {
   isolation: isolate; 
   font-size: var(--fs-16); 
 }
+.text-area:focus {
+  outline: 2px solid var(--color-darkorchid);
+}
 .type-your-message { flex: 1; position: relative; line-height: 150%; z-index: 0; flex-shrink: 0; }
 
 
