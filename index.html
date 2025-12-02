@@ -178,17 +178,19 @@
 						</div>
 					</div>
 					<div class="input">
-						<label class="label">Name</label>
-						<input class="text-input" type="text" name="firstName" required />
+						<label class="label">Name
+							<input class="text-input" type="text" name="firstName" required />
+						</label>
 					</div>
 					<div class="input">
-						<label class="label">Email</label>
-						<input class="text-input" type="text" name="email" required />
-						
+						<label class="label">Email
+							<input class="text-input" type="text" name="email" required />
+						</label>
 					</div>
 					<div class="input">
-						<label class="label">Phone</label>
-						<input class="text-input" type="text" name="phone" required />
+						<label class="label">Phone
+							<input class="text-input" type="text" name="phone" required />
+						</label>
 					</div>
 					<!-- <div class="checkbox-group">
 							<div class="tagline-wrapper">
@@ -228,8 +230,9 @@
 								</div>
 							</div>
 							<div class="input">
-								<label class="label">Friend #01</label>
-								<input class="text-input" type="text" name="friend01" required />
+								<label class="label">Friend #01
+									<input class="text-input" type="text" name="friend01" required />
+								</label>
 							</div>
 							<div class="input">
 								<label class="label">Message to Friend
@@ -262,49 +265,28 @@
 									<div class="progress-bar"></div>
 								</div>
 							</div>
+							
 							<div class="select">
-								<div class="select-one">Select one...</div>
-								<div class="nav-icons">
-									<img class="vector-icon" alt="" />
-								</div>
+								<label for="funding">Select one...
+									<select id="funding" name="funding" required class="custom-select">
+										<option value="" disabled selected>Select</option>
+										<option value="1000">AUD $1000</option>
+										<option value="10K">AUD $10,000</option>
+										<option value="50K">AUD $50,000</option>
+										<option value="other">Other</option>
+									</select>
+								</label>
 							</div>
-							<div class="options">
-								<div class="checkbox-group">
-									<div class="radio">
-										<div class="checkbox"></div>
-									</div>
-									<div class="label">AUD $1000</div>
-								</div>
-								<div class="checkbox-group">
-									<div class="radio">
-										<div class="checkbox"></div>
-									</div>
-									<div class="label">AUD $10,000</div>
-								</div>
-								<div class="checkbox-group">
-									<div class="radio">
-										<div class="checkbox"></div>
-									</div>
-									<div class="label">AUD $50,000</div>
-								</div>
-								<div class="checkbox-group">
-									<div class="radio">
-										<div class="checkbox"></div>
-									</div>
-									<div class="label">Other</div>
-								</div>
-							</div>
-							<div class="text-input">
-								<div class="select2">
-									<div class="label">AUD</div>
-									<div class="nav-icons2">
-										<img class="vector-icon2" alt="" />
-									</div>
-								</div>
-								<div class="text-input-child"></div>
-								<div class="text-input2">
-									<div class="select-one">Amount</div>
-								</div>
+							
+							<div class="select-input">
+								<select id="currency" name="currency" required class="custom-select">
+									<option value="AUD">AUD</option>
+									<option value="USD">USD</option>
+									<option value="EUR">EUR</option>
+									<option value="YEN">YEN</option>
+								</select>
+								<input class="number-input" type="number" name="amount" placeholder="Enter Amount" required >
+								</input>
 							</div>
 							<div class="button-parent">
 								<div class="secondary-button previous-button">Previous Step</div>

@@ -42,8 +42,11 @@ body {
 	--transition-popup: all 0.5s ease;
 	--transition: all 0.25s ease;
 
+	--border: 1px solid #ccc;
+
 
   	/* Gap */
+  	--gap-8: 0.5rem;
   	--gap-10: 0.625rem;
   	--gap-16: 1rem;
   	--gap-24: 1.5rem;

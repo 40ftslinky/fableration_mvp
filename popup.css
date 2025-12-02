@@ -96,7 +96,7 @@
 .tagline-wrapper { display: flex; align-items: center; }
 .tagline { position: relative; line-height: 150%; font-weight: 600; }
 
-#popup-overlay .content,
+#popupOverlay .content,
 #popupOverlay .content2 {
   /* align-self: stretch; */
   display: flex;
@@ -139,18 +139,46 @@
 .contact-pop-up-complete .progress-bar { width: 95%; }
 
 /* Inputs */
-.input { width: 35rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: var(--gap-10); }
-input:focus {
+.input { 
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: center; 
+  gap: var(--gap-10); 
+}
+input:focus,
+input:focus-visible {
   outline: 2px solid var(--color-darkorchid);
   /* outline-offset: 2px; */
 }
 .label { width: 33.5rem; position: relative; line-height: 150%; display: inline-block; }
-.text-input { align-self: stretch; height: 3.125rem; border-radius: var(--br-6); background-color: var(--color-white); border: 1px solid var(--color-gray-100); box-sizing: border-box; display: flex; align-items: center; padding: var(--padding-12); }
+.text-input {
+  width: 100%; 
+  align-self: stretch; 
+  /* height: 3.125rem;  */
+  border-radius: var(--br-6); 
+  background-color: var(--color-white);   
+  border: var(--border); 
+  /* box-sizing: border-box;  */
+  display: flex; 
+  align-items: center; 
+  padding: var(--padding-12); 
+}
 .placeholder { flex: 1; position: relative; line-height: 150%; }
 
 .text-area { 
   width: 100%; height: 7.5rem; 
-  border-radius: var(--br-6); background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; display: flex; align-items: flex-start; padding: var(--padding-12); position: relative; isolation: isolate; font-size: var(--fs-16); 
+  border-radius: var(--br-6); 
+  background-color: var(--color-white); 
+  border: var(--border); 
+  /* box-sizing: border-box;  */
+  display: flex; 
+  align-items: flex-start; 
+  padding: var(--padding-12); 
+  position: relative; 
+  isolation: isolate; 
+  font-size: var(--fs-16); 
 }
 .type-your-message { flex: 1; position: relative; line-height: 150%; z-index: 0; flex-shrink: 0; }
 
@@ -163,7 +191,7 @@ form textarea,
 select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: var(--border); 
     margin-bottom: 0.5rem;
 }
 
@@ -175,7 +203,7 @@ form textarea {
 form input:focus,
 form textarea:focus
 form select:focus {
-    outline: 1px solid var(--default);
+    outline: var(--border); 
     box-shadow: 0 0 5px rgba(90, 50, 255, 0.5);
 }
 
@@ -194,9 +222,15 @@ form label {
 .checkbox-group5 { align-self: stretch; display: flex; align-items: flex-start; gap: 0.5rem; color: var(--color-black); }
 .checkbox2,
 .checkbox6 { 
-	height: 1.25rem; width: 1.25rem; position: relative; background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; 
+	height: 1.25rem; 
+  width: 1.25rem; 
+  position: relative; 
+  background-color: var(--color-white); 
+  border: 1px solid var(--color-black); 
+  box-sizing: border-box; 
 	overflow: hidden; 
-	flex-shrink: 0; }
+	flex-shrink: 0; 
+}
 
 /* Absolute-positioned checkbox groups (step 3 specific) */
 .checkbox-group-abs,
@@ -211,12 +245,79 @@ form label {
 .checkbox-group4 { top: 7.313rem; }
 
 /* Selects and helper icons */
-.select { width: 35.125rem; border-radius: 8px; border: var(--border-1); box-sizing: border-box; display: flex; align-items: center; padding: var(--padding-12); gap: var(--gap-16); font-size: var(--fs-16); }
+/* .select, */
+select { 
+  width: 100%; 
+  border-radius: 8px; 
+  border: var(--border); 
+  box-sizing: border-box; 
+  padding: var(--padding-12); 
+  font-size: var(--fs-16); 
+}
+.select, label {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: var(--gap-8); 
+  width: 100%; 
+}
 .select-one { flex: 1; position: relative; line-height: 150%; }
 .nav-icons, .nav-icons2 { 
 	/* overflow: hidden;  */
 	flex-shrink: 0; 
 }
+
+/* Custom styled select */
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;  
+  color: #222;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 12px;
+}
+
+.custom-select:focus {
+  border-color: var(--default);
+}
+
+.custom-select:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.select-input {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+}
+select#currency {
+  width: 6rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.number-input {
+  flex: 1;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  margin-bottom: 0.5rem;
+  font-size: var(--fs-16);
+  align-self: stretch;
+}
+
 .nav-icons { height: 1.5rem; width: 1.5rem; }
 .nav-icons2 { height: 1rem; width: 1rem; }
 .vector-icon, .vector-icon2 { 
