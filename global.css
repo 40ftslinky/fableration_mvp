@@ -18,14 +18,31 @@ body {
   	
   	/* Color */
   	--color-black: #000;
-  	--color-darkorchid: #9a47e6;
+	--color-blue : #235ff4;
+	--color-sapphire : #5760ef;
+	--color-purple : #9a47e6;
+  	--color-darkorchid: var(--color-purple);
+	--default: var(--color-purple);
   	--color-ghostwhite: #eef0f7;
   	--color-gray-100: #121212;
   	--color-gray-200: rgba(0, 0, 0, 0.6);
   	--color-gray-300: rgba(255, 255, 255, 0.95);
   	--color-lightsteelblue: #98a3c7;
   	--color-white: #fff;
-  	
+	--color-white-rgb: 255, 255, 255;
+	--gradient-blue-purple: linear-gradient(59deg, #235FF4 0%, #5760EF 50%, #9A47E6 100%);
+	--gradient-blue-purple: linear-gradient(59deg, #235FF4 0%, #5760EF 50%, #9A47E6 100%);
+	--brand-gradient: var(--gradient-blue-purple);
+	--purple-gradient: linear-gradient(59deg, #9A47E6 0%, rgba(154, 71, 230, 0) 100%);
+
+	--mono-gradient: linear-gradient(59deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.9) 100%);
+	/* linear-gradient(211.03deg, #235ff4, #5760ef 50%, #9a47e6); */
+  	--gradient-fill: var(--brand-Gradient, linear-gradient(59deg, #235FF4 0.%, #5760EF 50%, #9A47E6 100%));
+
+	--transition-popup: all 0.5s ease;
+	--transition: all 0.25s ease;
+
+
   	/* Gap */
   	--gap-10: 0.625rem;
   	--gap-16: 1rem;
@@ -44,10 +61,12 @@ body {
   	--br-32: 32px;
   	
   	/* Font */
-  	--font-circular-std: Circular Std;
-  	--font-dm-sans: DM Sans;
-  	--font-passion-one: Passion One;
-  	--font-sofia-pro: Sofia Pro;
+  	/* --font-body: Circular Std; */
+  	--font-dm-sans: 'DM Sans', sans-serif;
+  	--font-passion-one: 'Passion One', cursive;
+  	/* --font-body: Sofia Pro; */
+	--font-body: var(--font-dm-sans);
+	--font-header: var(--font-passion-one);
   	
   	/* FontSize */
   	--fs-14: 0.875rem;

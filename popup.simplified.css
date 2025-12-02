@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(113, 113, 113, 0.0);
   opacity: 0;
   pointer-events: none;
   transition: opacity 180ms ease, background-color 180ms ease;
@@ -21,6 +21,7 @@
 }
 .popup-overlay.open {
   opacity: 1;
+  background-color: rgba(113, 113, 113, 0.3);
   pointer-events: auto;
 }
 
@@ -29,20 +30,15 @@
   width: 100%;
   box-sizing: border-box;
   opacity: 0;
-  transform: translate(-50%,-50% );
-  top: 50%;
-  left: 50%;
-  /* transition: opacity 180ms ease, transform 0.5s ease; */
-  transition: var(--transition-popup);
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease;
   pointer-events: none;
-  position: absolute;
-  z-index: -100; /* ensure inner popup content appears above overlay dim */
+  z-index: 100; /* ensure inner popup content appears above overlay dim */
 }
 .popup-step.active {
   opacity: 1;
-  /* transform: translate(-50%, -50%); */
+  transform: translateY(0);
   pointer-events: auto;
-  z-index: 100;
 }
 
 /* Base styles shared across popup steps */
@@ -51,9 +47,8 @@
 .contact-pop-up-step-3,
 .contact-pop-up-complete {
   width: 100%;
-  height: 100%;
-  /* position: relative; */
-  /* overflow: hidden; */
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,9 +57,14 @@
   font-size: var(--fs-16);
   color: var(--color-black);
   font-family: var(--font-dm-sans);
+}
+
+/* Step-specific tweaks */
+.contact-pop-up-step-1 {
   backdrop-filter: blur(4px);
+  background-color: var(--color-gray-300);
   padding: 7rem var(--padding-64);
-  justify-content: flex-start;
+  justify-content: center;
 }
 .contact-pop-up-step-2,
 .contact-pop-up-step-3,
@@ -96,23 +96,17 @@
 .tagline-wrapper { display: flex; align-items: center; }
 .tagline { position: relative; line-height: 150%; font-weight: 600; }
 
-#popup-overlay .content,
-#popupOverlay .content2 {
-  /* align-self: stretch; */
+.content,
+.content2 {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-24);
-  /* font-size: var(--fs-48);  */
 }
+.content2 { font-size: var(--fs-48); }
 
-#popupOverlay .heading { 
-  align-self: stretch; 
-  position: relative; 
-  line-height: 120%; 
-  font-size: var(--fs-48); 
-
-}
+.heading { align-self: stretch; position: relative; line-height: 120%; }
 .text { align-self: stretch; position: relative; line-height: 150%; font-size: var(--fs-18); }
 
 .form {
@@ -120,7 +114,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.125rem;
   max-width: 35rem;
   text-align: left;
   font-size: var(--fs-14);
@@ -133,70 +127,24 @@
 
 /* progress-bar: base + step-specific width overrides below */
 .progress-bar { height: var(--height-12); border-radius: var(--br-32); background-color: var(--color-darkorchid); }
-.contact-pop-up-step-1 .progress-bar { width: 15%; }
-.contact-pop-up-step-2 .progress-bar { width: 30%; }
-.contact-pop-up-step-3 .progress-bar { width: 45%; }
-.contact-pop-up-complete .progress-bar { width: 95%; }
+.contact-pop-up-step-1 .progress-bar { width: 2.813rem; }
+.contact-pop-up-step-2 .progress-bar { width: 9.075rem; }
+.contact-pop-up-step-3 .progress-bar { width: 18.75rem; }
 
 /* Inputs */
 .input { width: 35rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: var(--gap-10); }
-input:focus {
-  outline: 2px solid var(--color-darkorchid);
-  /* outline-offset: 2px; */
-}
 .label { width: 33.5rem; position: relative; line-height: 150%; display: inline-block; }
 .text-input { align-self: stretch; height: 3.125rem; border-radius: var(--br-6); background-color: var(--color-white); border: 1px solid var(--color-gray-100); box-sizing: border-box; display: flex; align-items: center; padding: var(--padding-12); }
 .placeholder { flex: 1; position: relative; line-height: 150%; }
 
-.text-area { 
-  width: 100%; height: 7.5rem; 
-  border-radius: var(--br-6); background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; display: flex; align-items: flex-start; padding: var(--padding-12); position: relative; isolation: isolate; font-size: var(--fs-16); 
-}
+.text-area { width: 35.125rem; height: 11.375rem; border-radius: var(--br-6); background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; display: flex; align-items: flex-start; padding: var(--padding-12); position: relative; isolation: isolate; font-size: var(--fs-16); }
 .type-your-message { flex: 1; position: relative; line-height: 150%; z-index: 0; flex-shrink: 0; }
-
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="number"],
-form textarea,
-select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 0.5rem;
-}
-
-form textarea { 
-    /* width: 100% !important; */
-    height:30px;
-}
-
-form input:focus,
-form textarea:focus
-form select:focus {
-    outline: 1px solid var(--default);
-    box-shadow: 0 0 5px rgba(90, 50, 255, 0.5);
-}
-
-form input:not([type="submit"]) {
-    font-size: 1rem;
-}
-
-form label {
-    font-size: 0.8rem;
-}
-
-
 
 /* Checkbox groups */
 .checkbox-group,
 .checkbox-group5 { align-self: stretch; display: flex; align-items: flex-start; gap: 0.5rem; color: var(--color-black); }
 .checkbox2,
-.checkbox6 { 
-	height: 1.25rem; width: 1.25rem; position: relative; background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; 
-	overflow: hidden; 
-	flex-shrink: 0; }
+.checkbox6 { height: 1.25rem; width: 1.25rem; position: relative; background-color: var(--color-white); border: 1px solid var(--color-black); box-sizing: border-box; overflow: hidden; flex-shrink: 0; }
 
 /* Absolute-positioned checkbox groups (step 3 specific) */
 .checkbox-group-abs,
@@ -213,24 +161,36 @@ form label {
 /* Selects and helper icons */
 .select { width: 35.125rem; border-radius: 8px; border: var(--border-1); box-sizing: border-box; display: flex; align-items: center; padding: var(--padding-12); gap: var(--gap-16); font-size: var(--fs-16); }
 .select-one { flex: 1; position: relative; line-height: 150%; }
-.nav-icons, .nav-icons2 { 
-	/* overflow: hidden;  */
-	flex-shrink: 0; 
-}
+.nav-icons, .nav-icons2 { overflow: hidden; flex-shrink: 0; }
 .nav-icons { height: 1.5rem; width: 1.5rem; }
 .nav-icons2 { height: 1rem; width: 1rem; }
-.vector-icon, .vector-icon2 { 
-	position: absolute; 
-	max-width: 100%; 
-	overflow: hidden; 
-	max-height: 100%; 
-}
+.vector-icon, .vector-icon2 { position: absolute; max-width: 100%; overflow: hidden; max-height: 100%; }
 .vector-icon { height: 27.92%; width: 48.33%; top: 35.51%; right: 25.79%; left: 25.88%; }
 .vector-icon2 { height: 28.13%; width: 48.13%; top: 35.51%; right: 26%; left: 25.88%; }
 
 /* Text input helpers */
 .text-input-child { align-self: stretch; width: 0.063rem; position: relative; border-right: var(--border-1); box-sizing: border-box; }
 .text-input2 { align-self: stretch; flex: 1; display: flex; align-items: center; padding: var(--padding-8) var(--padding-12); color: var(--color-gray); }
+
+/* Buttons: consolidated */
+.button-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  font-size: var(--fs-16);
+  color: var(--color-white);
+  font-family: var(--font-body);
+}
+/* Specific variations */
+.button-parent--right { justify-content: flex-end; padding: var(--padding-48) 0 0; }
+.button-parent--space-between { justify-content: space-between; padding: 3rem 0 0; }
+
+.button { display: flex; align-items: flex-start; opacity: 0.3; }
+.button2, .button4 { align-self: stretch; border-radius: var(--br-6); display: flex; align-items: center; justify-content: center; padding: var(--padding-12) var(--padding-24); }
+.button2 { background-color: var(--color-black); border: 1px solid var(--color-black); }
+.button4 { background-color: var(--color-black); border: 1px solid var(--color-black); }
+.button3, .button5, .button6 { position: relative; line-height: 150%; }
 
 /* Details / complete step */
 .details { align-self: stretch; position: relative; line-height: 150%; }
