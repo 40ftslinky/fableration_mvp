@@ -8,6 +8,11 @@
   	justify-content: center;
   	gap: 0.875rem;
 }
+@media screen and (max-width:600px) {
+	.logo-white, .logo-white svg {
+		width: 60vw
+	}
+}
 .logo-white .main-logo {
   	align-self: stretch;
   	display: flex;

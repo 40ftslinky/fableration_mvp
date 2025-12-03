@@ -21,8 +21,11 @@ body {
 	--color-blue : #235ff4;
 	--color-sapphire : #5760ef;
 	--color-purple : #9a47e6;
-  	--color-darkorchid: var(--color-purple);
-	--default: var(--color-purple);
+	--color-red: #fa531e;
+	--color-red-rgb: 250, 83, 30;
+	--color-yolk: #fdd14e;
+  	--color-darkorchid: var(--color-red);
+	--default: var(--color-red);
   	--color-ghostwhite: #eef0f7;
   	--color-gray-100: #121212;
   	--color-gray-200: rgba(0, 0, 0, 0.6);
@@ -30,10 +33,12 @@ body {
   	--color-lightsteelblue: #98a3c7;
   	--color-white: #fff;
 	--color-white-rgb: 255, 255, 255;
+	--gradient-red: linear-gradient(59deg, var(--color-red) 0%,  var(--color-yolk) 100%);
 	--gradient-blue-purple: linear-gradient(59deg, #235FF4 0%, #5760EF 50%, #9A47E6 100%);
-	--gradient-blue-purple: linear-gradient(59deg, #235FF4 0%, #5760EF 50%, #9A47E6 100%);
-	--brand-gradient: var(--gradient-blue-purple);
+	--brand-gradient: var(--gradient-red);
+	
 	--purple-gradient: linear-gradient(59deg, #9A47E6 0%, rgba(154, 71, 230, 0) 100%);
+	--red-gradient: linear-gradient(59deg, #fa531e 0%, rgba(var(--color-red-rgb), 0) 100%);
 
 	--mono-gradient: linear-gradient(59deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.9) 100%);
 	/* linear-gradient(211.03deg, #235ff4, #5760ef 50%, #9a47e6); */
@@ -82,4 +87,14 @@ body {
   	--height-24: 1.5rem;
   	--height-48: 3rem;
   	
+}
+
+@media screen and (max-width: 768px) {
+  	:root {
+		--fs-48: 2.25rem;
+		--padding-64: 1rem;
+  	}
+	
+
+	
 }
